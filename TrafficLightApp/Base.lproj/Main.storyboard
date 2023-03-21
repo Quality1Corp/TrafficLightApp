@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <device id="retina4_0" orientation="portrait" appearance="dark"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
@@ -20,18 +20,18 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="giP-Sw-U2F">
                                 <rect key="frame" x="110" y="40" width="100" height="360"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ciq-zx-PXd">
+                                    <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ciq-zx-PXd">
                                         <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                         <color key="backgroundColor" systemColor="systemRedColor"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="ciq-zx-PXd" secondAttribute="height" multiplier="1:1" id="t1v-Aa-W0B"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mlc-Lf-6HK">
+                                    <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mlc-Lf-6HK">
                                         <rect key="frame" x="0.0" y="130" width="100" height="100"/>
                                         <color key="backgroundColor" systemColor="systemYellowColor"/>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zw0-xU-6Zh">
+                                    <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zw0-xU-6Zh">
                                         <rect key="frame" x="0.0" y="260" width="100" height="100"/>
                                         <color key="backgroundColor" systemColor="systemGreenColor"/>
                                     </view>
@@ -45,6 +45,9 @@
                                 <state key="normal" title="START">
                                     <color key="titleColor" systemColor="systemBackgroundColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="switchButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="156-JI-mb3"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -58,6 +61,12 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="YHu-ax-JF7" secondAttribute="bottom" multiplier="10:9" id="c9t-8g-w6w"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="greenView" destination="zw0-xU-6Zh" id="xdn-dR-v6k"/>
+                        <outlet property="redView" destination="ciq-zx-PXd" id="yBr-Ah-0U4"/>
+                        <outlet property="startButton" destination="YHu-ax-JF7" id="7DG-1K-lOV"/>
+                        <outlet property="yellowView" destination="Mlc-Lf-6HK" id="klB-4g-mY0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
