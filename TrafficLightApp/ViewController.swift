@@ -31,7 +31,7 @@ final class ViewController: UIViewController {
         roundingTrafficLights()
     }
     
-    @IBAction func switchButton() {
+    @IBAction private func switchButton() {
         if startButton.currentTitle == "START" {
             startButton.setTitle("NEXT", for: .normal)
         }
