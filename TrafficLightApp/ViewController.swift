@@ -13,11 +13,11 @@ enum Color {
 
 final class ViewController: UIViewController {
     
-    @IBOutlet weak var redView: UIView!
-    @IBOutlet weak var yellowView: UIView!
-    @IBOutlet weak var greenView: UIView!
+    @IBOutlet private var redView: UIView!
+    @IBOutlet private var yellowView: UIView!
+    @IBOutlet private var greenView: UIView!
     
-    @IBOutlet weak var startButton: UIButton!
+    @IBOutlet private var startButton: UIButton!
     
     private var currentLight = Color.red
     
